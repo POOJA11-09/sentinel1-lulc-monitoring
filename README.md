@@ -14,7 +14,7 @@ for any location and start month.
 | Dataset – Dynamic World monthly labels (GeoTIFF, 10 m + 40 m) | https://drive.google.com/drive/folders/1rU4ORHNPlosup3YXDADjl2RrlCuzrhiD?usp=sharing |
 | Training code | this repository: [`scripts/`](scripts), [`notebooks/`](notebooks), [`gee/`](gee) |
 | Model weights (all 20 trained models + best model) | https://drive.google.com/drive/folders/1OFYCDR44ozFbC2PLM6roL58yp24_wAnn?usp=sharing |
-| Prototype code | this repository: [`prototype/`](prototype) |
+| Prototype code | this repository (top level): [`app.py`](app.py), [`lulc_prototype.py`](lulc_prototype.py), [`temporal_smoothing.py`](temporal_smoothing.py), [`07_prototype.ipynb`](07_prototype.ipynb) — setup in [`PROTOTYPE_README.md`](PROTOTYPE_README.md) |
 | Demo video | https://drive.google.com/file/d/1T2VQMbsiy4PeoAHiO94rzmO115nKYYiy/view?usp=sharing |
 
 ## Results (test set, spatially separate areas, reference: Dynamic World)
@@ -42,15 +42,22 @@ matching the training resolution clearly change accuracy; all other changes stay
 ## Repository structure
 
 ```
-gee/            Google Earth Engine scripts: Sentinel-1 monthly composites, Dynamic World monthly labels
-notebooks/      01–11: data transfer, inspection, patch preparation, training curves, statistics, test results,
-                diagnostics, experiments and temporal smoothing (with outputs)
-scripts/        train.py, evaluate.py, predict_maps.py, speckle_filter.py, weak_class_diagnostics.py, run_finetune.sh
-prototype/      Streamlit app (app.py), processing pipeline (lulc_prototype.py), temporal_smoothing.py,
-                evaluation results used by the app, example run outputs, own README
-results/        evaluation tables (train / val / test / experiments), figures, diagnostics, monthly statistics,
-                training histories and model configurations
-docs/           figures for the report
+gee/                      Google Earth Engine scripts: Sentinel-1 monthly composites, Dynamic World monthly labels
+notebooks/                01–11: data transfer, inspection, patch preparation, training curves, monthly statistics,
+                          test results, training diagnostics, experiments and temporal smoothing (with outputs)
+scripts/                  train.py, evaluate.py, predict_maps.py, speckle_filter.py, weak_class_diagnostics.py,
+                          run_finetune.sh, clean_notebooks.py
+docs/                     system and model architecture figures
+app.py                    prototype: Streamlit web app
+lulc_prototype.py         prototype: retrieval, compositing, segmentation, statistics (also a command-line tool)
+temporal_smoothing.py     prototype: temporal smoothing of the 12 monthly maps + smoothing analysis
+07_prototype*.ipynb       prototype notebooks: Frankfurt (case study), Mannheim, Cairo
+evaluation/               all evaluation results: test / train / validation / experiment tables, confusion matrix,
+                          weak-class diagnostics and report figures (also used by the app)
+example_results/          tables and figures of the prototype runs (Frankfurt, Mannheim, Cairo, 40 m runs, smoothing)
+model/                    put best_model.pt here (download link above)
+prototype/.streamlit/     app colour settings (copy to .streamlit/ next to app.py to use them)
+PROTOTYPE_README.md       how to install and run the prototype
 ```
 
 ## Data and preprocessing (summary)
@@ -68,8 +75,8 @@ docs/           figures for the report
 1. Run the two scripts in `gee/` in the Earth Engine Code Editor (exports to Google Drive), or download the dataset above.
 2. `pip install -r requirements.txt`, then notebooks 02–04 (download, alignment, patches).
 3. Train, e.g. `python3 scripts/train.py --arch segformer --train-res 10`; evaluate with `python3 scripts/evaluate.py`.
-4. Prototype: see [`prototype/README.md`](prototype/README.md) (Python 3.11, Earth Engine account, `streamlit run app.py`).
-   Put the downloaded `best_model.pt` into `prototype/model/`.
+4. Prototype: see [`PROTOTYPE_README.md`](PROTOTYPE_README.md) (Python 3.11, Earth Engine account, `streamlit run app.py`).
+   Put the downloaded `best_model_segformer_10m.pt` into `model/` and rename it to `best_model.pt`.
 
 Paths in the scripts point to the SRH Data Lab project folder (`PROJ` at the top of `scripts/train.py`); change it for
 another machine.
