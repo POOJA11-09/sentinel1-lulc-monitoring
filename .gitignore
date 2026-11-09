@@ -1,0 +1,7 @@
+*.pt
+*.pth
+*.npy
+*.tif
+__pycache__/
+.ipynb_checkpoints/
+*_backup*.py
