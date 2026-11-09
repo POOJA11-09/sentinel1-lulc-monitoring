@@ -10,8 +10,8 @@ for any location and start month.
 
 | What | Link |
 |---|---|
-| Dataset – Sentinel-1 monthly composites (GeoTIFF, 10 m + 40 m) | https://drive.google.com/drive/folders/1Hk1nD1vfaNckx05vt3LJUOlaBgik4x70?usp=sharing |
-| Dataset – Dynamic World monthly labels (GeoTIFF, 10 m + 40 m) | https://drive.google.com/drive/folders/1rU4ORHNPlosup3YXDADjl2RrlCuzrhiD?usp=sharing |
+| Dataset – Sentinel-1 monthly composites (GeoTIFF, 10 m + 40 m) | https://drive.google.com/drive/folders/1rU4ORHNPlosup3YXDADjl2RrlCuzrhiD?usp=sharing |
+| Dataset – Dynamic World monthly labels (GeoTIFF, 10 m + 40 m) | https://drive.google.com/drive/folders/1Hk1nD1vfaNckx05vt3LJUOlaBgik4x70?usp=sharing |
 | Training code | this repository: [`scripts/`](scripts), [`notebooks/`](notebooks), [`gee/`](gee) |
 | Model weights (all 20 trained models + best model) | https://drive.google.com/drive/folders/1OFYCDR44ozFbC2PLM6roL58yp24_wAnn?usp=sharing |
 | Prototype code | this repository (top level): [`app.py`](app.py), [`lulc_prototype.py`](lulc_prototype.py), [`temporal_smoothing.py`](temporal_smoothing.py), [`07_prototype.ipynb`](07_prototype.ipynb) — setup in [`PROTOTYPE_README.md`](PROTOTYPE_README.md) |
