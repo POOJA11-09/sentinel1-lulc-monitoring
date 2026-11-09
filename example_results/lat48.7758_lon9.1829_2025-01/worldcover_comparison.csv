@@ -1,0 +1,10 @@
+,prototype_%,WorldCover_%,difference_pp,IoU
+Water,0.982,0.656,0.326,0.508
+Trees,33.765,56.963,-23.198,0.549
+Grass,0.862,5.955,-5.093,0.104
+Flooded vegetation,0.0,0.0,0.0,
+Crops,3.885,2.358,1.526,0.447
+Shrub and scrub,0.062,0.0,0.062,0.0
+Built-up,60.444,34.04,26.403,0.542
+Bare ground,0.0,0.027,-0.027,0.0
+Snow and ice,0.0,0.0,0.0,

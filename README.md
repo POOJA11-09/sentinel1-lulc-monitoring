@@ -1,80 +1,142 @@
-# Monthly LULC Monitoring from Sentinel-1 SAR with Deep Learning
+# Sentinel-1 LULC Prototype — monthly land-cover maps from radar only
 
-**Pooja Chandrappa · Deep Learning · SRH Hochschule Heidelberg · 2026**
+Given a **latitude/longitude** and a **start month**, the prototype downloads Sentinel-1 radar data from
+Google Earth Engine, builds **12 monthly composites**, runs a trained deep-learning model (Sentinel-1 is the
+**only** input) and returns:
 
-Semantic segmentation of land use / land cover (9 Dynamic World classes) with **Sentinel-1 radar (VV, VH) as the only input**,
-and a Streamlit prototype that produces **12 monthly LULC maps**, class percentages and month-to-month / total change
-for any location and start month.
+- 12 monthly land-use / land-cover (LULC) maps (9 Dynamic World classes)
+- the **percentage of the area** covered by each class in each month
+- the **month-to-month change** and the **total change** (first → last month), in **percentage points**
+- an **independent sanity check** against ESA WorldCover 2021 (not used for training)
+- a **model comparison** page with the test-set results of all trained models
 
-## Public links
+Classes: 0 Water · 1 Trees · 2 Grass · 3 Flooded vegetation · 4 Crops · 5 Shrub and scrub · 6 Built-up ·
+7 Bare ground · 8 Snow and ice
 
-| What | Link |
+---
+
+## 1. What you need
+
+| What | Notes |
 |---|---|
-| Dataset – Sentinel-1 monthly composites (GeoTIFF, 10 m + 40 m) | https://drive.google.com/drive/folders/1Hk1nD1vfaNckx05vt3LJUOlaBgik4x70?usp=sharing |
-| Dataset – Dynamic World monthly labels (GeoTIFF, 10 m + 40 m) | https://drive.google.com/drive/folders/1rU4ORHNPlosup3YXDADjl2RrlCuzrhiD?usp=sharing |
-| Training code | this repository: [`scripts/`](scripts), [`notebooks/`](notebooks), [`gee/`](gee) |
-| Model weights (all trained models) | WEIGHTS_LINK |
-| Prototype code | this repository: [`prototype/`](prototype) |
-| Demo video | VIDEO_LINK |
+| **Python 3.10–3.12** (tested: 3.11) | Windows, macOS or Linux. Download: <https://www.python.org/downloads/> |
+| **A Google account registered for Google Earth Engine** | free for noncommercial / research use: <https://code.earthengine.google.com/register> |
+| **A Google Cloud project enabled for Earth Engine** | created during registration; you need its **project ID** (e.g. `my-ee-project`). No billing or payment card is needed for noncommercial use. |
+| about 3 GB free disk space | for Python packages (mainly PyTorch) |
+| internet connection | data are streamed from Earth Engine |
 
-## Results (test set, spatially separate areas, reference: Dynamic World)
+No API key file is needed. You sign in once with your own Google account (step 3). A GPU is **not** required.
 
-| Model (trained and tested at 10 m) | OA | mIoU | mean F1 |
-|---|---|---|---|
-| **SegFormer (MiT-B2)** | **0.832** | **0.432** | **0.537** |
-| U-Net (ResNet-34) | 0.818 | 0.423 | 0.531 |
-| FPN (ResNet-34) | 0.816 | 0.400 | 0.496 |
-| DeepLabV3+ (ResNet-34) | 0.810 | 0.407 | 0.509 |
+## 2. Install (once)
 
-Per-class test IoU (SegFormer 10 m): Built-up 0.844 · Trees 0.788 · Crops 0.730 · Water 0.669 · Grass 0.338 ·
-Snow 0.233 · Shrub 0.166 · Bare 0.080 · Flooded vegetation 0.041 (Cohen's κ 0.769).
+Open a terminal (Windows: *Command Prompt* or *PowerShell*) **in this folder** and run:
 
-**Experiments (20 trained models):** 4 architectures trained at 10 m and at 40 m, SegFormer and U-Net also with mixed 10 m + 40 m training, each tested in 3 modes;
-input experiments (month encoding, confidence-weighted loss, Lee speckle filter, seed); fine-tuning (no pre-training,
-MiT-B0/B4, cosine schedule, learning rate, class weights). Only ImageNet pre-training (−0.032 mIoU without it) and
-matching the training resolution clearly change accuracy; all other changes stay within the run-to-run variation
-(±0.011 mIoU). Temporal smoothing removes 55–75 % of the apparent monthly change in the prototype output.
+```bash
+python -m venv venv
+# Windows:
+venv\Scripts\activate
+# macOS / Linux:
+source venv/bin/activate
 
-![System architecture](docs/system_architecture.png)
-
-![Model architectures](docs/model_architectures.png)
-
-## Repository structure
-
-```
-gee/            Google Earth Engine scripts: Sentinel-1 monthly composites, Dynamic World monthly labels
-notebooks/      01–11: data transfer, inspection, patch preparation, training curves, statistics, test results,
-                diagnostics, experiments and temporal smoothing (with outputs)
-scripts/        train.py, evaluate.py, predict_maps.py, speckle_filter.py, weak_class_diagnostics.py, run_finetune.sh
-prototype/      Streamlit app (app.py), processing pipeline (lulc_prototype.py), temporal_smoothing.py,
-                evaluation results used by the app, example run outputs, own README
-results/        evaluation tables (train / val / test / experiments), figures, diagnostics, monthly statistics,
-                training histories and model configurations
-docs/           figures for the report
+pip install --upgrade pip
+pip install -r requirements.txt
 ```
 
-## Data and preprocessing (summary)
+(On macOS/Linux use `python3` if `python` is not found.)
 
-- **Input:** `COPERNICUS/S1_GRD`, IW, VV + VH, ascending, relative orbit 15 (GEE: thermal-noise removal, radiometric
-  calibration, terrain correction). Monthly composite: common VV/VH mask, mean in linear power → dB (2–8 scenes).
-- **Labels:** `GOOGLE/DYNAMICWORLD/V1`, monthly mean class probabilities → argmax (9 classes); 40 m labels by majority of
-  4 × 4 one-hot fractions (no bilinear resampling).
-- **Area / period:** Heidelberg – Rhine-Neckar, ≈ 40 × 40 km (EPSG:32632), January–December 2025.
-- **Split:** 25 spatial super-blocks of 7.68 km → 17 train / 4 val / 4 test, same for all months and resolutions
-  (0 shared blocks). Patches 256 × 256 px (10 m) / 64 × 64 px (40 m). Normalisation from the training split only.
+## 3. Sign in to Earth Engine (once per computer)
 
-## Reproduce
+```bash
+earthengine authenticate
+```
 
-1. Run the two scripts in `gee/` in the Earth Engine Code Editor (exports to Google Drive), or download the dataset above.
-2. `pip install -r requirements.txt`, then notebooks 02–04 (download, alignment, patches).
-3. Train, e.g. `python3 scripts/train.py --arch segformer --train-res 10`; evaluate with `python3 scripts/evaluate.py`.
-4. Prototype: see [`prototype/README.md`](prototype/README.md) (Python 3.11, Earth Engine account, `streamlit run app.py`).
-   Put the downloaded `best_model.pt` into `prototype/model/`.
+A browser window opens: choose your Google account and allow access. When it says *"Successfully saved
+authorization token"*, you are done. On a remote server without a browser use
+`earthengine authenticate --auth_mode=notebook` and paste the code shown in the browser.
 
-Paths in the scripts point to the SRH Data Lab project folder (`PROJ` at the top of `scripts/train.py`); change it for
-another machine.
+## 4. Run
 
-## Required accounts
+### Option A — web app (recommended)
 
-- Google Earth Engine (free noncommercial use) with a Google Cloud project ID – for the GEE scripts and the prototype.
-- No paid services and no API keys are needed.
+```bash
+streamlit run app.py
+```
+
+The app opens in your browser at <http://localhost:8501>.
+
+1. In the sidebar choose a **location** (or *Custom coordinates*), the **start year and month** and the area size.
+2. Under **Advanced**, enter **your own Earth Engine project ID**.
+3. Press **Run** (≈1–2 min with a GPU, ≈3–6 min on a laptop CPU for a 10 km × 10 km area).
+4. Explore the tabs: 12 maps, single month, class percentages, changes (pp), WorldCover check, downloads.
+5. The page **Model comparison (test results)** shows which model is best for which kind of data.
+
+Tip: set the project once with an environment variable instead of typing it each time —
+Windows `set EE_PROJECT=my-ee-project`, macOS/Linux `export EE_PROJECT=my-ee-project` — then `streamlit run app.py`.
+
+### Option B — notebook
+
+Open `07_prototype.ipynb` in JupyterLab (`jupyter lab`), set `LAT`, `LON`, `START_MONTH` and `GEE_PROJECT` in
+the parameter cell, then *Run → Run All Cells*.
+
+### Option C — command line
+
+```bash
+python lulc_prototype.py --lat 50.1109 --lon 8.6821 --start 2025-01 --project my-ee-project
+```
+
+## 5. Folder contents
+
+```
+prototype/
+├── app.py                 # Streamlit web app
+├── lulc_prototype.py      # all processing code (also usable from the command line)
+├── 07_prototype.ipynb     # notebook interface
+├── requirements.txt
+├── README.md
+├── model/best_model.pt    # trained SegFormer (MiT-B2), 10 m, inputs VV, VH, VV−VH (≈100 MB)
+├── evaluation/            # test-set results and figures shown on the "Model comparison" page
+└── example_runs/          # saved example runs (Mannheim, Frankfurt) with outputs
+```
+
+Outputs of each run are written to `results/lat…_lon…_YYYY-MM/`: 12 GeoTIFF maps (open in QGIS), figures and
+CSV tables (`class_percent_per_month.csv`, `month_to_month_change_pp.csv`, `total_change_pp.csv`,
+`worldcover_comparison.csv`, `run_info.json`).
+
+## 6. How it works
+
+1. **Area and grid.** A square around the point in the local UTM zone, 10 m pixels, corners on a 40 m lattice.
+2. **Data retrieval.** `COPERNICUS/S1_GRD` from Earth Engine — already calibrated to σ⁰, thermal-noise
+   corrected, terrain corrected and in dB. Filters: IW mode, VV + VH, **ascending passes only**. Of the ascending
+   relative orbits covering the area, the one with the most scenes in the 12 months is used, so all months share
+   one viewing geometry (training used relative orbit 15).
+3. **Monthly compositing.** Per scene, only pixels where both VV and VH are valid are kept; scenes are converted
+   from dB to linear power, averaged over the month and converted back to dB. Averaging the 2–8 scenes of a month
+   reduces speckle (temporal multi-looking); no additional spatial speckle filter is applied — identical to the
+   training data (verified: 0.000 dB difference for Heidelberg, June 2025).
+4. **Model.** Inputs VV, VH and VV−VH (dB), clipped and standardised with statistics from the training split.
+   Prediction in overlapping 512 × 512 px tiles with blended probabilities (no tile seams).
+5. **Statistics.** Share of a class = class pixels ÷ valid pixels × 100. Month-to-month change =
+   share(month) − share(previous month); total change = share(last) − share(first); both in percentage points.
+6. **Independent check.** ESA WorldCover 2021 mapped to the 9 classes, compared with the most frequent predicted
+   class per pixel over the 12 months.
+
+## 7. Troubleshooting
+
+| Problem | Fix |
+|---|---|
+| `Could not connect to Google Earth Engine` / `Please authorize access` | run `earthengine authenticate` again; check the project ID under *Advanced* |
+| `Caller does not have required permission` / project not registered | use a Cloud project that is registered for Earth Engine under your account |
+| `No ascending Sentinel-1 … scenes found` | location outside Sentinel-1 ascending coverage for that period — try another start month or location |
+| `The 12 months … are not complete yet` | choose an earlier start month (all 12 months must already be over) |
+| installing `rasterio` fails | upgrade pip (`pip install --upgrade pip`) and retry; use Python 3.10–3.12 |
+| slow on a laptop | normal on CPU; use a smaller area (sidebar slider) |
+
+## 8. Limitations
+
+- Trained on **one region** (Heidelberg, temperate Central Europe, 2025) and **one orbit** (15, ascending);
+  accuracy is lower for different landscapes, climates or viewing geometries.
+- Reference labels are **Dynamic World** (Sentinel-2-based), not ground truth.
+- **Seasonal effects** (leaf-off forest, wet/frozen soil, snow, harvested fields) cause large winter shifts that
+  are mostly **not real land-use change**.
+- With ≈17 % of pixels misclassified, month-to-month changes of a few percentage points are within the error.
+- The model must be applied to **10 m** data only.
