@@ -1,0 +1,4 @@
+split,n_blocks,Water,Trees,Grass,FloodVeg,Crops,Shrub,Built-up,Bare,Snow
+train,153,148,153,152,25,148,153,150,130,135
+val,36,34,36,36,6,35,36,36,34,30
+test,36,35,36,36,7,35,36,36,32,35

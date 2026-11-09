@@ -1,0 +1,298 @@
+run,arch,train_res,mode,class,IoU,F1,support_px
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test10,Water,0.7776157699044342,0.8748974700491539,1153733
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test10,Trees,0.8168154885103783,0.8991727488850196,10365519
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test10,Grass,0.3502591358182975,0.5188028379545531,1175244
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test10,Flooded vegetation,0.0307761937089839,0.059714599341383,3687
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test10,Crops,0.7745014198940416,0.8729228516935065,5987689
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test10,Shrub and scrub,0.2061063225753553,0.3417713989514025,462917
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test10,Built-up,0.799510260027256,0.8885864979898991,5673071
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test10,Bare ground,0.0802940835938404,0.1486522694389368,192230
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test10,Snow and ice,0.2093820543927271,0.3462628763709665,134132
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40,Water,0.3968986593555851,0.5682569121208575,73565
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40,Trees,0.6860570261795377,0.8138005008455553,653343
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40,Grass,0.1599001351218333,0.2757136244406727,73230
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40,Flooded vegetation,0.0,0.0,201
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40,Crops,0.558916435762293,0.7170575958280779,374553
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40,Shrub and scrub,0.0261160714285714,0.0509027626713073,26782
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40,Built-up,0.6094433960846445,0.7573343648708133,352010
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40,Bare ground,8.362602441879912e-05,0.0001672380633832,11325
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40,Snow and ice,0.0097627884460222,0.019336795844986,8137
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40_from10,Water,0.7841685580085687,0.8790296796664013,73565
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40_from10,Trees,0.8204907644754876,0.9013951407898344,653343
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40_from10,Grass,0.3532498155047969,0.5220762810494464,73230
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40_from10,Flooded vegetation,0.0382978723404255,0.0737704918032786,201
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40_from10,Crops,0.7770988854254132,0.8745702243118411,374553
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40_from10,Shrub and scrub,0.2067290150365832,0.3426270727903497,26782
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40_from10,Built-up,0.8030139853390162,0.890746263610404,352010
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40_from10,Bare ground,0.0793186252438841,0.1469790725161649,11325
+segformer_train10_VV-VH-RATIO_s42,segformer,10,test40_from10,Snow and ice,0.2091040190607561,0.3458825969715826,8137
+segformer_train10_abl-E1-seed1,segformer,10,test10,Water,0.7799291183333038,0.8763597497226367,1153733
+segformer_train10_abl-E1-seed1,segformer,10,test10,Trees,0.8119644821092886,0.8962256050009207,10365519
+segformer_train10_abl-E1-seed1,segformer,10,test10,Grass,0.3539732497784085,0.5228659426415401,1175244
+segformer_train10_abl-E1-seed1,segformer,10,test10,Flooded vegetation,0.0389121338912133,0.0749093838099073,3687
+segformer_train10_abl-E1-seed1,segformer,10,test10,Crops,0.7759216805718424,0.8738242108987571,5987689
+segformer_train10_abl-E1-seed1,segformer,10,test10,Shrub and scrub,0.1994409789335487,0.3325565533218257,462917
+segformer_train10_abl-E1-seed1,segformer,10,test10,Built-up,0.8069655001980843,0.893172005895655,5673071
+segformer_train10_abl-E1-seed1,segformer,10,test10,Bare ground,0.0919281018882846,0.1683775730825358,192230
+segformer_train10_abl-E1-seed1,segformer,10,test10,Snow and ice,0.2183458926411759,0.3584300549786194,134132
+segformer_train10_abl-E1-seed1,segformer,10,test40,Water,0.575573990187066,0.7306213402503919,73565
+segformer_train10_abl-E1-seed1,segformer,10,test40,Trees,0.6812332213603646,0.8103970498621802,653343
+segformer_train10_abl-E1-seed1,segformer,10,test40,Grass,0.1374350330102542,0.241657816089115,73230
+segformer_train10_abl-E1-seed1,segformer,10,test40,Flooded vegetation,0.0,0.0,201
+segformer_train10_abl-E1-seed1,segformer,10,test40,Crops,0.553873638629564,0.7128940537507952,374553
+segformer_train10_abl-E1-seed1,segformer,10,test40,Shrub and scrub,0.0400444613449556,0.077005287433907,26782
+segformer_train10_abl-E1-seed1,segformer,10,test40,Built-up,0.6090747550640669,0.7570496686337187,352010
+segformer_train10_abl-E1-seed1,segformer,10,test40,Bare ground,7.350779182593354e-05,0.0001470047776552,11325
+segformer_train10_abl-E1-seed1,segformer,10,test40,Snow and ice,0.0,0.0,8137
+segformer_train10_abl-E1-seed1,segformer,10,test40_from10,Water,0.7868044998479781,0.8806833650966512,73565
+segformer_train10_abl-E1-seed1,segformer,10,test40_from10,Trees,0.8154560281018692,0.8983484209798909,653343
+segformer_train10_abl-E1-seed1,segformer,10,test40_from10,Grass,0.3567287239048999,0.5258659562807412,73230
+segformer_train10_abl-E1-seed1,segformer,10,test40_from10,Flooded vegetation,0.0378787878787878,0.072992700729927,201
+segformer_train10_abl-E1-seed1,segformer,10,test40_from10,Crops,0.7785133726988538,0.8754653011323467,374553
+segformer_train10_abl-E1-seed1,segformer,10,test40_from10,Shrub and scrub,0.198919197117859,0.3318308649924876,26782
+segformer_train10_abl-E1-seed1,segformer,10,test40_from10,Built-up,0.8105924895974422,0.8953892101669605,352010
+segformer_train10_abl-E1-seed1,segformer,10,test40_from10,Bare ground,0.0895219384413883,0.1643325118711306,11325
+segformer_train10_abl-E1-seed1,segformer,10,test40_from10,Snow and ice,0.2179668004773787,0.3579191163370746,8137
+segformer_train10_abl-X3-month,segformer,10,test10,Water,0.7735204591765703,0.8722994484492262,1153733
+segformer_train10_abl-X3-month,segformer,10,test10,Trees,0.8230212169081353,0.9029200639847612,10365519
+segformer_train10_abl-X3-month,segformer,10,test10,Grass,0.3524996042660649,0.5212564989360557,1175244
+segformer_train10_abl-X3-month,segformer,10,test10,Flooded vegetation,0.0283170080142475,0.0550744717700034,3687
+segformer_train10_abl-X3-month,segformer,10,test10,Crops,0.7720271480089231,0.8713491199910618,5987689
+segformer_train10_abl-X3-month,segformer,10,test10,Shrub and scrub,0.1969684260319879,0.3291121499084957,462917
+segformer_train10_abl-X3-month,segformer,10,test10,Built-up,0.7969929673988039,0.8870295898291387,5673071
+segformer_train10_abl-X3-month,segformer,10,test10,Bare ground,0.1072305288997991,0.1936914239645268,192230
+segformer_train10_abl-X3-month,segformer,10,test10,Snow and ice,0.2462342667377311,0.3951652964611523,134132
+segformer_train10_abl-X3-month,segformer,10,test40,Water,0.5414024362425293,0.7024803172911857,73565
+segformer_train10_abl-X3-month,segformer,10,test40,Trees,0.6574010342407894,0.7932914492742875,653343
+segformer_train10_abl-X3-month,segformer,10,test40,Grass,0.0817908311057923,0.1512137628716761,73230
+segformer_train10_abl-X3-month,segformer,10,test40,Flooded vegetation,0.0,0.0,201
+segformer_train10_abl-X3-month,segformer,10,test40,Crops,0.383623247623773,0.5545198062877383,374553
+segformer_train10_abl-X3-month,segformer,10,test40,Shrub and scrub,0.002770673486786,0.0055260361317747,26782
+segformer_train10_abl-X3-month,segformer,10,test40,Built-up,0.578747971129949,0.7331733521921485,352010
+segformer_train10_abl-X3-month,segformer,10,test40,Bare ground,0.0061216582719876,0.0121688231669747,11325
+segformer_train10_abl-X3-month,segformer,10,test40,Snow and ice,0.0215969102230629,0.0422806882185016,8137
+segformer_train10_abl-X3-month,segformer,10,test40_from10,Water,0.7787388288231986,0.8756078365235967,73565
+segformer_train10_abl-X3-month,segformer,10,test40_from10,Trees,0.826633639025905,0.9050896921691716,653343
+segformer_train10_abl-X3-month,segformer,10,test40_from10,Grass,0.3554444975097223,0.524469276555048,73230
+segformer_train10_abl-X3-month,segformer,10,test40_from10,Flooded vegetation,0.0258481421647819,0.0503937007874015,201
+segformer_train10_abl-X3-month,segformer,10,test40_from10,Crops,0.7747019459507039,0.8730502017178977,374553
+segformer_train10_abl-X3-month,segformer,10,test40_from10,Shrub and scrub,0.2008353556094829,0.3344927423585877,26782
+segformer_train10_abl-X3-month,segformer,10,test40_from10,Built-up,0.8003175942733158,0.8890849001521399,352010
+segformer_train10_abl-X3-month,segformer,10,test40_from10,Bare ground,0.1073382254836557,0.1938671004277366,11325
+segformer_train10_abl-X3-month,segformer,10,test40_from10,Snow and ice,0.2473298851346812,0.3965749367224945,8137
+segformer_train10_abl-X2b-confweight,segformer,10,test10,Water,0.78050864059061,0.8767254736059114,1153733
+segformer_train10_abl-X2b-confweight,segformer,10,test10,Trees,0.8256851160759681,0.9045208385667868,10365519
+segformer_train10_abl-X2b-confweight,segformer,10,test10,Grass,0.3457605528311274,0.5138515200252197,1175244
+segformer_train10_abl-X2b-confweight,segformer,10,test10,Flooded vegetation,0.0230294396961063,0.0450220468786261,3687
+segformer_train10_abl-X2b-confweight,segformer,10,test10,Crops,0.7688551686541178,0.869325179674402,5987689
+segformer_train10_abl-X2b-confweight,segformer,10,test10,Shrub and scrub,0.1704913739965016,0.2913158999444471,462917
+segformer_train10_abl-X2b-confweight,segformer,10,test10,Built-up,0.804422687341718,0.8916122513697678,5673071
+segformer_train10_abl-X2b-confweight,segformer,10,test10,Bare ground,0.1007438688931075,0.1830468862741233,192230
+segformer_train10_abl-X2b-confweight,segformer,10,test10,Snow and ice,0.2220731240362757,0.3634367202231079,134132
+segformer_train10_abl-X2b-confweight,segformer,10,test40,Water,0.5563162147602801,0.714914115118912,73565
+segformer_train10_abl-X2b-confweight,segformer,10,test40,Trees,0.7001027983424247,0.8236005481845153,653343
+segformer_train10_abl-X2b-confweight,segformer,10,test40,Grass,0.1366432789448776,0.2404330038738641,73230
+segformer_train10_abl-X2b-confweight,segformer,10,test40,Flooded vegetation,0.0,0.0,201
+segformer_train10_abl-X2b-confweight,segformer,10,test40,Crops,0.5375255361189565,0.6992085965294417,374553
+segformer_train10_abl-X2b-confweight,segformer,10,test40,Shrub and scrub,0.013722294654498,0.0270730844667374,26782
+segformer_train10_abl-X2b-confweight,segformer,10,test40,Built-up,0.5992069534950409,0.7493801251745233,352010
+segformer_train10_abl-X2b-confweight,segformer,10,test40,Bare ground,0.0006600176004693,0.0013191645291315,11325
+segformer_train10_abl-X2b-confweight,segformer,10,test40,Snow and ice,0.011398262047173,0.0225396116938183,8137
+segformer_train10_abl-X2b-confweight,segformer,10,test40_from10,Water,0.7881995503433189,0.8815565915917957,73565
+segformer_train10_abl-X2b-confweight,segformer,10,test40_from10,Trees,0.8294620010826186,0.906782431766026,653343
+segformer_train10_abl-X2b-confweight,segformer,10,test40_from10,Grass,0.3481913222088603,0.5165310241552185,73230
+segformer_train10_abl-X2b-confweight,segformer,10,test40_from10,Flooded vegetation,0.0309734513274336,0.0600858369098712,201
+segformer_train10_abl-X2b-confweight,segformer,10,test40_from10,Crops,0.7711657879320445,0.8708002302059284,374553
+segformer_train10_abl-X2b-confweight,segformer,10,test40_from10,Shrub and scrub,0.1720862805868679,0.293640977523777,26782
+segformer_train10_abl-X2b-confweight,segformer,10,test40_from10,Built-up,0.8076460123396041,0.8935886858669659,352010
+segformer_train10_abl-X2b-confweight,segformer,10,test40_from10,Bare ground,0.1007082060944708,0.1829880172362906,11325
+segformer_train10_abl-X2b-confweight,segformer,10,test40_from10,Snow and ice,0.223579304495335,0.3654512685429086,8137
+segformer_train10_abl-E3-lee,segformer,10,test10,Water,0.7643033461008429,0.8664080899579696,1153733
+segformer_train10_abl-E3-lee,segformer,10,test10,Trees,0.8135615839206346,0.8971976371068057,10365519
+segformer_train10_abl-E3-lee,segformer,10,test10,Grass,0.3329468513924504,0.4995650817504697,1175244
+segformer_train10_abl-E3-lee,segformer,10,test10,Flooded vegetation,0.0263841421736158,0.0514118273841236,3687
+segformer_train10_abl-E3-lee,segformer,10,test10,Crops,0.7724856020346764,0.8716410459390166,5987689
+segformer_train10_abl-E3-lee,segformer,10,test10,Shrub and scrub,0.1564227297117215,0.2705286322947238,462917
+segformer_train10_abl-E3-lee,segformer,10,test10,Built-up,0.8004189107354014,0.8891474155961417,5673071
+segformer_train10_abl-E3-lee,segformer,10,test10,Bare ground,0.0945377592035563,0.1727446283303136,192230
+segformer_train10_abl-E3-lee,segformer,10,test10,Snow and ice,0.2285709872252344,0.3720924384539945,134132
+segformer_train10_abl-E3-lee,segformer,10,test40,Water,0.5400905206890497,0.7013750340433348,73565
+segformer_train10_abl-E3-lee,segformer,10,test40,Trees,0.6492792246599296,0.7873490612771245,653343
+segformer_train10_abl-E3-lee,segformer,10,test40,Grass,0.0794847166506582,0.1472641815574328,73230
+segformer_train10_abl-E3-lee,segformer,10,test40,Flooded vegetation,0.0,0.0,201
+segformer_train10_abl-E3-lee,segformer,10,test40,Crops,0.3711349597775174,0.5413543825587211,374553
+segformer_train10_abl-E3-lee,segformer,10,test40,Shrub and scrub,0.0069450654266893,0.0137943283405363,26782
+segformer_train10_abl-E3-lee,segformer,10,test40,Built-up,0.5617612330396125,0.719394515826561,352010
+segformer_train10_abl-E3-lee,segformer,10,test40,Bare ground,0.0279962598316924,0.0544676297485286,11325
+segformer_train10_abl-E3-lee,segformer,10,test40,Snow and ice,0.0009909820632246,0.0019800019800019,8137
+segformer_train10_abl-E3-lee,segformer,10,test40_from10,Water,0.7694623971797885,0.8697131947038559,73565
+segformer_train10_abl-E3-lee,segformer,10,test40_from10,Trees,0.8174785906204374,0.8995743827071686,653343
+segformer_train10_abl-E3-lee,segformer,10,test40_from10,Grass,0.3357287263370704,0.5026899844517523,73230
+segformer_train10_abl-E3-lee,segformer,10,test40_from10,Flooded vegetation,0.0263852242744063,0.0514138817480719,201
+segformer_train10_abl-E3-lee,segformer,10,test40_from10,Crops,0.7750137750340159,0.8732481808702175,374553
+segformer_train10_abl-E3-lee,segformer,10,test40_from10,Shrub and scrub,0.1567538516660695,0.2710236952144959,26782
+segformer_train10_abl-E3-lee,segformer,10,test40_from10,Built-up,0.8039013732833957,0.89129193556759,352010
+segformer_train10_abl-E3-lee,segformer,10,test40_from10,Bare ground,0.0946763234525498,0.1729759225155173,11325
+segformer_train10_abl-E3-lee,segformer,10,test40_from10,Snow and ice,0.2300712347354138,0.3740779041709755,8137
+segformer_train10_ft-F1-scratch,segformer,10,test10,Water,0.7339484733413603,0.8465631875750309,1153733
+segformer_train10_ft-F1-scratch,segformer,10,test10,Trees,0.7892518733849162,0.8822143881753275,10365519
+segformer_train10_ft-F1-scratch,segformer,10,test10,Grass,0.32749819216590254,0.4934066111706973,1175244
+segformer_train10_ft-F1-scratch,segformer,10,test10,Flooded vegetation,0.0036617262423714035,0.007296733842946491,3687
+segformer_train10_ft-F1-scratch,segformer,10,test10,Crops,0.7321348953260457,0.8453555174041263,5987689
+segformer_train10_ft-F1-scratch,segformer,10,test10,Shrub and scrub,0.15332446109515596,0.26588261372617467,462917
+segformer_train10_ft-F1-scratch,segformer,10,test10,Built-up,0.7761509793243859,0.8739695987101491,5673071
+segformer_train10_ft-F1-scratch,segformer,10,test10,Bare ground,0.06726954071521628,0.12605914091792875,192230
+segformer_train10_ft-F1-scratch,segformer,10,test10,Snow and ice,0.13977661522005938,0.24527019304229605,134132
+segformer_train10_ft-F1-scratch,segformer,10,test40,Water,0.37513650718691893,0.5455989354167113,73565
+segformer_train10_ft-F1-scratch,segformer,10,test40,Trees,0.6483866497231807,0.7866924302402796,653343
+segformer_train10_ft-F1-scratch,segformer,10,test40,Grass,0.10250092564542732,0.18594256614418914,73230
+segformer_train10_ft-F1-scratch,segformer,10,test40,Flooded vegetation,0.0,0.0,201
+segformer_train10_ft-F1-scratch,segformer,10,test40,Crops,0.33327638178689545,0.4999359267734554,374553
+segformer_train10_ft-F1-scratch,segformer,10,test40,Shrub and scrub,0.008417792792792794,0.016695050113068485,26782
+segformer_train10_ft-F1-scratch,segformer,10,test40,Built-up,0.5705210041935667,0.7265372480472091,352010
+segformer_train10_ft-F1-scratch,segformer,10,test40,Bare ground,0.04029671210906175,0.07747157448448641,11325
+segformer_train10_ft-F1-scratch,segformer,10,test40,Snow and ice,0.003965404190214506,0.007899483734527585,8137
+segformer_train10_ft-F1-scratch,segformer,10,test40_from10,Water,0.738713723770901,0.8497243838034335,73565
+segformer_train10_ft-F1-scratch,segformer,10,test40_from10,Trees,0.7928578140624934,0.8844625690265216,653343
+segformer_train10_ft-F1-scratch,segformer,10,test40_from10,Grass,0.3300757957756061,0.4963262948231146,73230
+segformer_train10_ft-F1-scratch,segformer,10,test40_from10,Flooded vegetation,0.006430868167202572,0.012779552715654952,201
+segformer_train10_ft-F1-scratch,segformer,10,test40_from10,Crops,0.734705111462731,0.8470662899508216,374553
+segformer_train10_ft-F1-scratch,segformer,10,test40_from10,Shrub and scrub,0.15362599266336116,0.26633587252777974,26782
+segformer_train10_ft-F1-scratch,segformer,10,test40_from10,Built-up,0.779250235798446,0.8759310187178412,352010
+segformer_train10_ft-F1-scratch,segformer,10,test40_from10,Bare ground,0.06783181720507127,0.12704588140595655,11325
+segformer_train10_ft-F1-scratch,segformer,10,test40_from10,Snow and ice,0.14039712811308055,0.24622497663666323,8137
+segformer_train10_ft-F2-mitb0,segformer,10,test10,Water,0.7655281898396737,0.8671945248398336,1153733
+segformer_train10_ft-F2-mitb0,segformer,10,test10,Trees,0.8139209170543887,0.8974160994583029,10365519
+segformer_train10_ft-F2-mitb0,segformer,10,test10,Grass,0.36225817296206975,0.5318495130396349,1175244
+segformer_train10_ft-F2-mitb0,segformer,10,test10,Flooded vegetation,0.05013465920861819,0.09548234365752614,3687
+segformer_train10_ft-F2-mitb0,segformer,10,test10,Crops,0.769422606400403,0.8696877768117428,5987689
+segformer_train10_ft-F2-mitb0,segformer,10,test10,Shrub and scrub,0.20207825321501927,0.33621480577416774,462917
+segformer_train10_ft-F2-mitb0,segformer,10,test10,Built-up,0.7983308286141142,0.8878575798306798,5673071
+segformer_train10_ft-F2-mitb0,segformer,10,test10,Bare ground,0.10406859511919345,0.18851835036202325,192230
+segformer_train10_ft-F2-mitb0,segformer,10,test10,Snow and ice,0.20671370695790095,0.34260604775762715,134132
+segformer_train10_ft-F2-mitb0,segformer,10,test40,Water,0.45966292026804856,0.6298206440479248,73565
+segformer_train10_ft-F2-mitb0,segformer,10,test40,Trees,0.5387684811827957,0.7002593148628361,653343
+segformer_train10_ft-F2-mitb0,segformer,10,test40,Grass,0.10007667131091454,0.18194490242513264,73230
+segformer_train10_ft-F2-mitb0,segformer,10,test40,Flooded vegetation,0.0,0.0,201
+segformer_train10_ft-F2-mitb0,segformer,10,test40,Crops,0.419240307384809,0.5907953786308823,374553
+segformer_train10_ft-F2-mitb0,segformer,10,test40,Shrub and scrub,0.0006900809937166309,0.0013792102206736353,26782
+segformer_train10_ft-F2-mitb0,segformer,10,test40,Built-up,0.4493271011985818,0.6200492640025732,352010
+segformer_train10_ft-F2-mitb0,segformer,10,test40,Bare ground,0.003149358318242658,0.006278941998273291,11325
+segformer_train10_ft-F2-mitb0,segformer,10,test40,Snow and ice,0.0,0.0,8137
+segformer_train10_ft-F2-mitb0,segformer,10,test40_from10,Water,0.7712666332064293,0.8708645200528015,73565
+segformer_train10_ft-F2-mitb0,segformer,10,test40_from10,Trees,0.8175223830509787,0.899600896995444,653343
+segformer_train10_ft-F2-mitb0,segformer,10,test40_from10,Grass,0.36474480889977334,0.5345245594944925,73230
+segformer_train10_ft-F2-mitb0,segformer,10,test40_from10,Flooded vegetation,0.053231939163498096,0.10108303249097472,201
+segformer_train10_ft-F2-mitb0,segformer,10,test40_from10,Crops,0.771952008739036,0.8713012597766412,374553
+segformer_train10_ft-F2-mitb0,segformer,10,test40_from10,Shrub and scrub,0.20342665004344704,0.33807901800430096,26782
+segformer_train10_ft-F2-mitb0,segformer,10,test40_from10,Built-up,0.8015019219509711,0.8898152282657231,352010
+segformer_train10_ft-F2-mitb0,segformer,10,test40_from10,Bare ground,0.10259158837253295,0.18609173052727895,11325
+segformer_train10_ft-F2-mitb0,segformer,10,test40_from10,Snow and ice,0.20798046845197224,0.3443440914545569,8137
+segformer_train10_ft-F3-mitb4,segformer,10,test10,Water,0.7736531665836311,0.8723838247066349,1153733
+segformer_train10_ft-F3-mitb4,segformer,10,test10,Trees,0.8123928223597389,0.8964864706338904,10365519
+segformer_train10_ft-F3-mitb4,segformer,10,test10,Grass,0.33781682993383133,0.5050270296727241,1175244
+segformer_train10_ft-F3-mitb4,segformer,10,test10,Flooded vegetation,0.036226318484383,0.06991970352069178,3687
+segformer_train10_ft-F3-mitb4,segformer,10,test10,Crops,0.7673923408897113,0.8683893475552841,5987689
+segformer_train10_ft-F3-mitb4,segformer,10,test10,Shrub and scrub,0.18875942367375195,0.3175737999037825,462917
+segformer_train10_ft-F3-mitb4,segformer,10,test10,Built-up,0.8005583777690055,0.8892334596348306,5673071
+segformer_train10_ft-F3-mitb4,segformer,10,test10,Bare ground,0.09428956691028628,0.1723301944228743,192230
+segformer_train10_ft-F3-mitb4,segformer,10,test10,Snow and ice,0.22986334366106898,0.37380306494347504,134132
+segformer_train10_ft-F3-mitb4,segformer,10,test40,Water,0.4787629518310528,0.6475181857081729,73565
+segformer_train10_ft-F3-mitb4,segformer,10,test40,Trees,0.662769095631996,0.7971871709343822,653343
+segformer_train10_ft-F3-mitb4,segformer,10,test40,Grass,0.1385748575407223,0.24341808818796268,73230
+segformer_train10_ft-F3-mitb4,segformer,10,test40,Flooded vegetation,0.0,0.0,201
+segformer_train10_ft-F3-mitb4,segformer,10,test40,Crops,0.5112398971473064,0.6765833778109603,374553
+segformer_train10_ft-F3-mitb4,segformer,10,test40,Shrub and scrub,0.039900115936859,0.07673836232033207,26782
+segformer_train10_ft-F3-mitb4,segformer,10,test40,Built-up,0.550080849503234,0.7097447203215529,352010
+segformer_train10_ft-F3-mitb4,segformer,10,test40,Bare ground,0.007357184073860358,0.014606902477445224,11325
+segformer_train10_ft-F3-mitb4,segformer,10,test40,Snow and ice,0.0021394534668870953,0.004269771955361475,8137
+segformer_train10_ft-F3-mitb4,segformer,10,test40_from10,Water,0.7806628487876204,0.8768227509425958,73565
+segformer_train10_ft-F3-mitb4,segformer,10,test40_from10,Trees,0.8162676945078299,0.8988407347398437,653343
+segformer_train10_ft-F3-mitb4,segformer,10,test40_from10,Grass,0.3401175979529245,0.5075936596496692,73230
+segformer_train10_ft-F3-mitb4,segformer,10,test40_from10,Flooded vegetation,0.0380952380952381,0.07339449541284404,201
+segformer_train10_ft-F3-mitb4,segformer,10,test40_from10,Crops,0.7694493968634176,0.8697048903770496,374553
+segformer_train10_ft-F3-mitb4,segformer,10,test40_from10,Shrub and scrub,0.18746732526905951,0.31574313040838015,26782
+segformer_train10_ft-F3-mitb4,segformer,10,test40_from10,Built-up,0.8039711964416099,0.8913348483916688,352010
+segformer_train10_ft-F3-mitb4,segformer,10,test40_from10,Bare ground,0.09460002679887444,0.1728485738768515,11325
+segformer_train10_ft-F3-mitb4,segformer,10,test40_from10,Snow and ice,0.2317034196228827,0.3762324857291126,8137
+segformer_train10_ft-F4-cosine,segformer,10,test10,Water,0.7872671202219345,0.8809730916150634,1153733
+segformer_train10_ft-F4-cosine,segformer,10,test10,Trees,0.8087311207965249,0.8942524530018344,10365519
+segformer_train10_ft-F4-cosine,segformer,10,test10,Grass,0.34896240435955306,0.5173789917818057,1175244
+segformer_train10_ft-F4-cosine,segformer,10,test10,Flooded vegetation,0.027635856943799348,0.05378531073446328,3687
+segformer_train10_ft-F4-cosine,segformer,10,test10,Crops,0.7657899902628904,0.8673624774018339,5987689
+segformer_train10_ft-F4-cosine,segformer,10,test10,Shrub and scrub,0.2031165353599455,0.3376506421286573,462917
+segformer_train10_ft-F4-cosine,segformer,10,test10,Built-up,0.8055370423130981,0.892296334481306,5673071
+segformer_train10_ft-F4-cosine,segformer,10,test10,Bare ground,0.07709881027872151,0.14316014379176706,192230
+segformer_train10_ft-F4-cosine,segformer,10,test10,Snow and ice,0.24494442151665086,0.39350258097184426,134132
+segformer_train10_ft-F4-cosine,segformer,10,test40,Water,0.4006007273268875,0.5720412955824361,73565
+segformer_train10_ft-F4-cosine,segformer,10,test40,Trees,0.6707160790718562,0.8029085102771782,653343
+segformer_train10_ft-F4-cosine,segformer,10,test40,Grass,0.1319294407220019,0.23310541448210878,73230
+segformer_train10_ft-F4-cosine,segformer,10,test40,Flooded vegetation,0.0,0.0,201
+segformer_train10_ft-F4-cosine,segformer,10,test40,Crops,0.52985463391211,0.6926862489636385,374553
+segformer_train10_ft-F4-cosine,segformer,10,test40,Shrub and scrub,0.05247743229689067,0.09972172454541989,26782
+segformer_train10_ft-F4-cosine,segformer,10,test40,Built-up,0.5996777538216581,0.749748194458562,352010
+segformer_train10_ft-F4-cosine,segformer,10,test40,Bare ground,0.0,0.0,11325
+segformer_train10_ft-F4-cosine,segformer,10,test40,Snow and ice,0.01449122064734504,0.02856844958815556,8137
+segformer_train10_ft-F4-cosine,segformer,10,test40_from10,Water,0.7939991479520419,0.885172268736515,73565
+segformer_train10_ft-F4-cosine,segformer,10,test40_from10,Trees,0.8120830953761259,0.8962978546053546,653343
+segformer_train10_ft-F4-cosine,segformer,10,test40_from10,Grass,0.3516376189273386,0.520313453847783,73230
+segformer_train10_ft-F4-cosine,segformer,10,test40_from10,Flooded vegetation,0.03017241379310345,0.058577405857740586,201
+segformer_train10_ft-F4-cosine,segformer,10,test40_from10,Crops,0.7680494246717027,0.8688099031103915,374553
+segformer_train10_ft-F4-cosine,segformer,10,test40_from10,Shrub and scrub,0.2025997962846195,0.33693635556989593,26782
+segformer_train10_ft-F4-cosine,segformer,10,test40_from10,Built-up,0.8090386102957373,0.8944404013173358,352010
+segformer_train10_ft-F4-cosine,segformer,10,test40_from10,Bare ground,0.07602091281616505,0.14130006565988182,11325
+segformer_train10_ft-F4-cosine,segformer,10,test40_from10,Snow and ice,0.24754244861483468,0.3968481375358166,8137
+segformer_train10_ft-F5-lr1e-4,segformer,10,test10,Water,0.7720032843233193,0.8713339203749012,1153733
+segformer_train10_ft-F5-lr1e-4,segformer,10,test10,Trees,0.805978453303931,0.8925670755699671,10365519
+segformer_train10_ft-F5-lr1e-4,segformer,10,test10,Grass,0.3439815729390182,0.511884358930308,1175244
+segformer_train10_ft-F5-lr1e-4,segformer,10,test10,Flooded vegetation,0.03314238952536825,0.06415841584158416,3687
+segformer_train10_ft-F5-lr1e-4,segformer,10,test10,Crops,0.7656429109940114,0.8672681279171837,5987689
+segformer_train10_ft-F5-lr1e-4,segformer,10,test10,Shrub and scrub,0.19554395169120842,0.3271213097847106,462917
+segformer_train10_ft-F5-lr1e-4,segformer,10,test10,Built-up,0.8044011146611836,0.8915989999399083,5673071
+segformer_train10_ft-F5-lr1e-4,segformer,10,test10,Bare ground,0.07841973885514979,0.14543453913111823,192230
+segformer_train10_ft-F5-lr1e-4,segformer,10,test10,Snow and ice,0.248562353815322,0.3981576940162773,134132
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40,Water,0.5886657225011802,0.7410819207131762,73565
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40,Trees,0.7065888553268354,0.8280715687569796,653343
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40,Grass,0.14398678698628872,0.25172805949202715,73230
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40,Flooded vegetation,0.0,0.0,201
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40,Crops,0.5694444761294237,0.7256637425413,374553
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40,Shrub and scrub,0.02062662368149238,0.040419528949950934,26782
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40,Built-up,0.6218158379988485,0.7668143613224352,352010
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40,Bare ground,0.00040054474084755265,0.0008007687379884689,11325
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40,Snow and ice,0.0001162655505173817,0.00023250406882120437,8137
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40_from10,Water,0.7789893617021276,0.8757661832859919,73565
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40_from10,Trees,0.8095625612323373,0.8947605112707614,653343
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40_from10,Grass,0.3463865682537108,0.5145425190968457,73230
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40_from10,Flooded vegetation,0.038314176245210725,0.07380073800738007,201
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40_from10,Crops,0.7680481980124437,0.8688091182987514,374553
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40_from10,Shrub and scrub,0.19565479574783343,0.3272763952332233,26782
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40_from10,Built-up,0.8081380768823084,0.8938897833242301,352010
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40_from10,Bare ground,0.07759914255091103,0.14402227968967576,11325
+segformer_train10_ft-F5-lr1e-4,segformer,10,test40_from10,Snow and ice,0.25027923361113497,0.40035733919736116,8137
+segformer_train10_ft-F6-noclassweight,segformer,10,test10,Water,0.7923120101954039,0.8841228599578745,1153733
+segformer_train10_ft-F6-noclassweight,segformer,10,test10,Trees,0.8317443085119405,0.9081445534149108,10365519
+segformer_train10_ft-F6-noclassweight,segformer,10,test10,Grass,0.3517048577411041,0.5203870589454774,1175244
+segformer_train10_ft-F6-noclassweight,segformer,10,test10,Flooded vegetation,0.025953146531924667,0.050593239310499215,3687
+segformer_train10_ft-F6-noclassweight,segformer,10,test10,Crops,0.7749039200178828,0.873178442256272,5987689
+segformer_train10_ft-F6-noclassweight,segformer,10,test10,Shrub and scrub,0.20837185970525632,0.3448803578661323,462917
+segformer_train10_ft-F6-noclassweight,segformer,10,test10,Built-up,0.8077612199790403,0.8936591968583171,5673071
+segformer_train10_ft-F6-noclassweight,segformer,10,test10,Bare ground,0.047642281762694055,0.09095142987649235,192230
+segformer_train10_ft-F6-noclassweight,segformer,10,test10,Snow and ice,0.21814442901399422,0.3581585628406435,134132
+segformer_train10_ft-F6-noclassweight,segformer,10,test40,Water,0.4850133294905973,0.6532107420974745,73565
+segformer_train10_ft-F6-noclassweight,segformer,10,test40,Trees,0.6884656785200638,0.8154926538080446,653343
+segformer_train10_ft-F6-noclassweight,segformer,10,test40,Grass,0.08553888859232371,0.1575970966885333,73230
+segformer_train10_ft-F6-noclassweight,segformer,10,test40,Flooded vegetation,0.0,0.0,201
+segformer_train10_ft-F6-noclassweight,segformer,10,test40,Crops,0.5582453114455976,0.716505042364233,374553
+segformer_train10_ft-F6-noclassweight,segformer,10,test40,Shrub and scrub,0.012373453318335208,0.024444444444444446,26782
+segformer_train10_ft-F6-noclassweight,segformer,10,test40,Built-up,0.5648928509448227,0.7219572261497161,352010
+segformer_train10_ft-F6-noclassweight,segformer,10,test40,Bare ground,0.0,0.0,11325
+segformer_train10_ft-F6-noclassweight,segformer,10,test40,Snow and ice,0.016396586441653083,0.03226415094339623,8137
+segformer_train10_ft-F6-noclassweight,segformer,10,test40_from10,Water,0.7971269905669947,0.8871125910979731,73565
+segformer_train10_ft-F6-noclassweight,segformer,10,test40_from10,Trees,0.8355915151088754,0.9104329674996493,653343
+segformer_train10_ft-F6-noclassweight,segformer,10,test40_from10,Grass,0.35497781086542457,0.5239610686151387,73230
+segformer_train10_ft-F6-noclassweight,segformer,10,test40_from10,Flooded vegetation,0.02145922746781116,0.04201680672268908,201
+segformer_train10_ft-F6-noclassweight,segformer,10,test40_from10,Crops,0.777119921541563,0.8745835462442514,374553
+segformer_train10_ft-F6-noclassweight,segformer,10,test40_from10,Shrub and scrub,0.21085441877521086,0.3482737734706239,26782
+segformer_train10_ft-F6-noclassweight,segformer,10,test40_from10,Built-up,0.8114361460187917,0.8959036704685188,352010
+segformer_train10_ft-F6-noclassweight,segformer,10,test40_from10,Bare ground,0.04777019520710998,0.09118448954862163,11325
+segformer_train10_ft-F6-noclassweight,segformer,10,test40_from10,Snow and ice,0.22181146025878004,0.3630862329803328,8137
